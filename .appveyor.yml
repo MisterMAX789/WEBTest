@@ -1,7 +1,14 @@
+image: Windows
+
+stack: jdk 11  # версия JDK
+
+branches:
+  only:
+    - master  # ветка git
 build: off
 
 install:
   - java -jar ./artifacts/app-order.jar &
 build_script:
-      - chmod +x gradlew
-      -./gradlew test--info -Dselenide.headless=true
+      - chmod +x gradlew;
+      -./gradlew test-Dselenide.headless=true;
