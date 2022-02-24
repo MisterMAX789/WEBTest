@@ -1,4 +1,3 @@
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +14,7 @@ public class CardApplication {
         form.$("[data-test-id=phone] input").setValue("+79997257198");
         form.$("[data-test-id=agreement]").click();
         form.$("[type= button").click();
-        $(".Success_successBlock__2L3Cw").shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id=order-success]").shouldHave(exactText("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
 
     }
 }
